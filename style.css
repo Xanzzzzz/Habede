@@ -35,6 +35,17 @@ body {
     overflow: hidden;
     z-index: 1;
 }
+#muteBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 14px;
+  border-radius: 50px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
 .flag__birthday{
     display: flex;
     justify-content: space-between;
