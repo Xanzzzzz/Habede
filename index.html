@@ -153,7 +153,11 @@ Maaf ya kalo gua cuma bisa nyampein segini doang, tapi doanya tulus. Semoga kamu
             </div>
         </div>
     </div>
+    <button id="muteBtn">🔇 Unmute</button>
 
+<audio id="bgm" autoplay loop muted>
+  <source src="habede.mp3" type="audio/mpeg">
+</audio>
 </body>
 <script>
     let datetxt = "4 january";
@@ -255,6 +259,19 @@ Maaf ya kalo gua cuma bisa nyampein segini doang, tapi doanya tulus. Semoga kamu
     close.addEventListener('click', function () {
         boxmail.classList.remove('active')
     })
+  const audio = document.getElementById("bgm");
+  const btn = document.getElementById("muteBtn");
+
+  btn.addEventListener("click", () => {
+    if (audio.muted) {
+      audio.muted = false;
+      audio.volume = 0.3; // atur volume
+      btn.textContent = "🔊 Mute";
+    } else {
+      audio.muted = true;
+      btn.textContent = "🔇 Unmute";
+    }
+  });
 </script>
 
 </html>
